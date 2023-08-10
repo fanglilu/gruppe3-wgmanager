@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:background="@drawable/rounded_corners_background_wg_home">
+
+    <RelativeLayout
+        android:id="@+id/shopping_mode_items"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/item_on_shopping_mode_name"
+            android:layout_width="300dp"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+
+            />
+
+        <TextView
+            android:id="@+id/item_on_shopping_mode_details"
+            android:layout_width="300dp"
+            android:layout_height="18dp"
+            android:layout_below="@id/item_on_shopping_mode_name"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/item_on_shopping_mode_owner"
+            android:layout_width="300dp"
+            android:layout_height="18dp"
+            android:layout_below="@id/item_on_shopping_mode_details"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/item_on_shopping_mode_list"
+            android:layout_width="300dp"
+            android:layout_height="18dp"
+            android:layout_below="@id/item_on_shopping_mode_owner"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            >
+        </TextView>
+
+        <CheckBox
+            android:id="@+id/item_on_shopping_mode_checked"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            />
+
+        </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

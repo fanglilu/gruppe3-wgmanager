@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/highlight_finance_recurring">
+
+    <RelativeLayout
+        android:id="@+id/list_item_with_debt"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/finance_list_item_debt_name"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/you_owe"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/finance_list_item_debt_payer"
+            android:layout_width="230dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/finance_list_item_debt_name"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/finance_list_item_period_date"
+            android:layout_width="230dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/finance_list_item_debt_payer"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/finance_list_item_debt_price"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/finance_list_item_debt_button"
+            android:layout_below="@id/finance_list_item_period_date"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:minHeight="48dp"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

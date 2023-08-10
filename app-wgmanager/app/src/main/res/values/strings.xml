@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">WG Manager</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Registration and Login-->
+    <string name="registration">Sign up</string>
+    <string name="login">Log in</string>
+    <string name="email">E-Mail</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="no_account">No account? Register </string>
+    <string name="have_account">Already have an account? </string>
+    <string name="here">here.</string>
+
+    <string name="wg_create">WG Create</string>
+    <string name="create">Create</string>
+    <string name="join">Join a WG</string>
+    <string name="create_a_new_wg">Create a new WG</string>
+    <string name="choose_a_name">Choose a name..</string>
+    <string name="my_first_wg">WG name</string>
+
+    <string name="finance">Finance</string>
+    <string name="shopping_list">Shopping List</string>
+    <string name="calendar"> Calendar</string>
+    <string name="invitation_code">Invitation Code</string>
+    <string name="step_in">Step in</string>
+    <string name="shopping_mode">Shopping Mode</string>
+    <string name="page_title">Shopping Lists</string>
+
+
+    <string name="wg_menu">Manage WG</string>
+
+    <string name="items_on_list"> %1$d items </string>
+    <string name="item_on_list"> %1$d item </string>
+
+    <string name="list_creator_name"> Created by: %1$s</string>
+    <string name="update_item">Update item</string>
+    <string name="item_details">Item Details</string>
+    <string name="finish_shopping">Finish shopping</string>
+    <string name="on_list"> On List: %1$s</string>
+    <string name="shopping_list_home">Shopping List</string>
+    <string name="finance_home">Finance</string>
+    <string name="calendar_home">Calendar</string>
+    <string name="make_private">Make private</string>
+    <string name="enter_shopping_mode">Enter shopping mode</string>
+
+    <!-- Finance -->
+    <string name="add_expense">Add expense</string>
+    <string name="repeating_s">Repeating\'s</string>
+    <string name="settle_up">Settle up</string>
+    <string name="cash_crash">Cash Crash</string>
+    <string name="you_owe">You owe</string>
+    <string name="you_are_owed">You are owed</string>
+    <string name="today">Today</string>
+    <string name="expense_name">Expense Name</string>
+    <string name="enter_a_description">Enter a description</string>
+    <string name="_0_00">0.00 €</string>
+    <string name="recurring">Recurring</string>
+    <string name="every">every</string>
+    <string name="none">None</string>
+    <string name="expense_image">Expense Image</string>
+    <string name="no">No</string>
+    <string name="submit">Submit</string>
+    <string name="you_paid">You paid</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="statistics">Statistics</string>
+    <string name="your_statistics_for_period">Your Statistics for period</string>
+    <string name="total_sum">Total sum:</string>
+    <string name="average">Average:</string>
+    <string name="contributed">Contributed:</string>
+    <string name="deviation">Deviation:</string>
+    <string name="current_period">Current period</string>
+    <string name="settled_up">Settled up</string>
+    <string name="show_all_periods">All periods</string>
+    <string name="show_current_period">Current period</string>
+    <string-array name="recurring_options">
+        <item>No</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+    <string name="create_event">Create Event</string>
+    <string name="your_wgs">Your Wgs</string>
+    <string name="current_wg">Current Wg</string>
+    <string name="switch_to_this_wg">Switch to this Wg</string>
+    <string name="name">Name</string>
+    <string name="id">ID</string>
+    <string name="creation_date">Creation Date</string>
+    <string name="get_invitation_code">GET invitation code</string>
+    <string name="features">Features</string>
+    <string name="welcome_msg">Welcome to WgManager! To get started Create or Join a wg.</string>
+    <string name="leave_wg">Leave Wg</string>
+    <string name="delete_wg">Delete Wg</string>
+    <string name="your_statistics_of_all_times">Your statistics of all times</string>
+</resources>

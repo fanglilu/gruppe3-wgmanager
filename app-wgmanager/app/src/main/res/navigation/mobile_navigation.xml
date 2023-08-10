@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    android:name="androidx.navigation.fragment.NavHostFragment"
+    app:startDestination="@+id/nav_host_fragment_activity_main">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="msp.gruppe3.wgmanager.MainActivity"
+        android:label="MainActivity" />
+
+    <fragment
+        android:id="@+id/nav_host_fragment_activity_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/activity_main">
+        <action
+            android:id="@+id/action_nav_host_fragment_activity_main_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_nav_host_fragment_activity_main_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="msp.gruppe3.wgmanager.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications">
+
+    </fragment>
+    <fragment
+        android:id="@+id/wgCreateFragment"
+        android:name="msp.gruppe3.wgmanager.ui.wg_root.fragments.WgCreateFragment"
+        android:label="fragment_wg_detail"
+        tools:layout="@layout/fragment_wg_detail">
+        <action
+            android:id="@+id/action_wgCreateFragment_to_wgDetailFragment"
+            app:destination="@id/wgDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wgJoinFragment"
+        android:name="msp.gruppe3.wgmanager.ui.wg_root.fragments.WgJoinFragment"
+        android:label="fragment_wg_join"
+        tools:layout="@layout/fragment_wg_join">
+        <action
+            android:id="@+id/action_wgJoinFragment_to_wgDetailFragment"
+            app:destination="@id/wgDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wgRootFragment"
+        android:name="msp.gruppe3.wgmanager.ui.wg_root.fragments.WgRootFragment"
+        android:label="fragment_wg_root"
+        tools:layout="@layout/fragment_wg_root">
+        <action
+            android:id="@+id/action_wgRootFragment_to_wgCreateFragment"
+            app:destination="@id/wgCreateFragment" />
+        <action
+            android:id="@+id/action_wgRootFragment_to_wgJoinFragment"
+            app:destination="@id/wgJoinFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/showShoppingListFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.shoppinglist.fragments.ShowShoppingListFragment"
+        android:label="fragment_show_shopping_list"
+        tools:layout="@layout/fragment_show_shopping_list">
+        <action
+            android:id="@+id/action_showShoppingListFragment_to_createNewListFragment"
+            app:destination="@id/createNewListFragment" />
+        <action
+            android:id="@+id/action_showShoppingListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_showShoppingListFragment_to_showItemFragment"
+            app:destination="@id/showItemFragment" />
+        <action
+            android:id="@+id/action_showShoppingListFragment_to_showListsForShoppingListFragment"
+            app:destination="@id/showListsForShoppingListFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/createNewListFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.shoppinglist.fragments.CreateNewListFragment"
+        android:label="fragment_create_list"
+        tools:layout="@layout/fragment_create_list">
+        <action
+            android:id="@+id/action_createNewListFragment_to_showShoppingListFragment"
+            app:destination="@id/showShoppingListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wgDetailFragment"
+        android:name="msp.gruppe3.wgmanager.ui.wg_root.fragments.WgDetailFragment"
+        android:label="fragment_wg_detail"
+        tools:layout="@layout/fragment_wg_detail">
+
+        <action
+            android:id="@+id/action_wgDetailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="msp.gruppe3.wgmanager.ui.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment2"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="msp.gruppe3.wgmanager.ui.auth.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="msp.gruppe3.wgmanager.ui.home.fragments.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_showShoppingListFragment"
+            app:destination="@id/showShoppingListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_wgRootFragment"
+            app:destination="@id/wgRootFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_financeFragment"
+            app:destination="@id/financeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_calendarHomeFragment"
+            app:destination="@id/calendarHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarHomeFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.calendar.fragments.CalendarHomeFragment"
+        android:label="fragment_calendar_home"
+        tools:layout="@layout/fragment_calendar_home">
+        <action
+            android:id="@+id/action_calendarHomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_calendarHomeFragment_to_calendarAddNewEventFragment"
+            app:destination="@id/calendarAddNewEventFragment" />
+        <action
+            android:id="@+id/action_calendarHomeFragment_to_calendarDetailFragment"
+            app:destination="@id/calendarDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarAddNewEventFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.calendar.fragments.CalendarAddNewEventFragment"
+        android:label="fragment_calendar_add_new_event"
+        tools:layout="@layout/fragment_calendar_add_new_event">
+        <action
+            android:id="@+id/action_calendarAddNewEventFragment_to_calendarHomeFragment"
+            app:destination="@id/calendarHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarDetailFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.calendar.fragments.CalendarDetailFragment"
+        android:label="fragment_calendar_detail"
+        tools:layout="@layout/fragment_calendar_detail">
+        <action
+            android:id="@+id/action_calendarDetailFragment_to_calendarHomeFragment"
+            app:destination="@id/calendarHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/financeFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.finance.fragments.FinanceFragment"
+        android:label="fragment_finance_home"
+        tools:layout="@layout/fragment_finance_home">
+        <action
+            android:id="@+id/action_financeFragment_to_financeAddExpenseFragment"
+            app:destination="@+id/financeAddExpenseFragment"/>
+        <action
+            android:id="@+id/action_financeFragment_to_financeSettleUpFragment"
+            app:destination="@id/financeSettleUpFragment" />
+        <action
+            android:id="@+id/action_financeFragment_to_financeStatistics"
+            app:destination="@id/financeStatisticsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/financeAddExpenseFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.finance.fragments.FinanceAddExpenseFragment"
+        android:label="fragment_finance_add_expense"
+        tools:layout="@layout/fragment_finance_add_expense">
+        <action
+            android:id="@+id/action_financeAddExpenseFragment_to_financeFragment"
+            app:destination="@id/financeFragment" />
+        <argument
+            android:name="expense_id"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/financeSettleUpFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.finance.fragments.FinanceSettleUpFragment"
+        android:label="fragment_finance_settle_up"
+        tools:layout="@layout/fragment_finance_settle_up">
+
+        <action
+            android:id="@+id/action_financeSettleUpFragment_to_financeFragment"
+            app:destination="@id/financeFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/financeStatisticsFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.finance.fragments.FinanceStatisticFragment"
+        android:label="fragment_finance_statistics"
+        tools:layout="@layout/fragment_finance_statistic">
+        <action
+            android:id="@+id/action_financeStatistics_to_financeFragment"
+            app:destination="@id/financeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showItemFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.shoppinglist.fragments.ShowItemFragment"
+        android:label="ShowItemFragment" >
+        <action
+            android:id="@+id/action_showItemFragment_to_showShoppingListFragment"
+            app:destination="@id/showShoppingListFragment" />
+        <action
+            android:id="@+id/action_showItemFragment_to_createNewItemFragment"
+            app:destination="@id/createNewItemFragment" />
+        <action
+            android:id="@+id/action_showItemFragment_to_showItemDetailsFragment"
+            app:destination="@id/showItemDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewItemFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.shoppinglist.fragments.CreateNewItemFragment"
+        android:label="fragment_create_item"
+        tools:layout="@layout/fragment_create_item" >
+        <action
+            android:id="@+id/action_createNewItemFragment_to_showItemFragment"
+            app:destination="@id/showItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showItemDetailsFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.shoppinglist.fragments.ShowItemDetailsFragment"
+        android:label="fragment_details_item"
+        tools:layout="@layout/fragment_details_item" >
+        <action
+            android:id="@+id/action_showItemDetailsFragment_to_showItemFragment"
+            app:destination="@id/showItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showListsForShoppingListFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.shoppinglist.fragments.ShowListsForShoppingListFragment"
+        android:label="fragment_select_lists_for_shopping_mode"
+        tools:layout="@layout/fragment_select_lists_for_shopping_mode" >
+        <action
+            android:id="@+id/action_showListsForShoppingListFragment_to_showShoppingListFragment"
+            app:destination="@id/showShoppingListFragment" />
+        <action
+            android:id="@+id/action_showListsForShoppingListFragment_to_shoppingModeFragment"
+            app:destination="@id/shoppingModeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingModeFragment"
+        android:name="msp.gruppe3.wgmanager.ui.features.shoppinglist.fragments.ShoppingModeFragment"
+        android:label="ShoppingModeFragment" >
+        <action
+            android:id="@+id/action_shoppingModeFragment_to_showShoppingListFragment"
+            app:destination="@id/showShoppingListFragment" />
+        <action
+            android:id="@+id/action_shoppingModeFragment_to_financeAddExpenseFragment"
+            app:destination="@id/financeAddExpenseFragment" />
+    </fragment>
+</navigation>

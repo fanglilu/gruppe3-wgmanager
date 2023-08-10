@@ -1,0 +1,43 @@
+image: gradle:alpine
+
+# Disable the Gradle daemon for Continuous Integration servers as correctness
+# is usually a priority over speed in CI environments. Using a fresh
+# runtime for each build is more reliable since the runtime is completely
+# isolated from any previous builds.
+variables:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+before_script:
+  - GRADLE_USER_HOME="$(pwd)/backend-wgmanager/.gradle"
+  - export GRADLE_USER_HOME
+
+build:
+  retry: 2
+  stage: build
+  only:
+    - main
+  script:
+    - cd backend-wgmanager && ./gradlew clean build bootJar -x test
+  artifacts:
+    expire_in: 5min
+    paths:
+      - backend-wgmanager/build/libs/wgmanager.jar
+
+
+deploy:
+  retry: 2
+  variables:
+    SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
+    SSH_PORT: $SSH_PORT
+  stage: deploy
+  only:
+    - main
+  script:
+    - 'which ssh-agent || ( apk add --update --no-cache openssh )'
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | ssh-add -
+    - ssh -o StrictHostKeyChecking=no -p$SSH_PORT praktikum@msp-ws2223-3.dev.mobile.ifi.lmu.de "ls"
+    - scp -o StrictHostKeyChecking=no -P$SSH_PORT backend-wgmanager/build/libs/wgmanager.jar praktikum@msp-ws2223-3.dev.mobile.ifi.lmu.de:/opt/wgmanager/
+    - ssh -o StrictHostKeyChecking=no -p$SSH_PORT praktikum@msp-ws2223-3.dev.mobile.ifi.lmu.de "sudo systemctl restart wgmanager.service"
+  environment: production

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.wg_root.fragments.WgDetailFragment"
+    android:background="@drawable/grade_background">
+
+    <TextView
+        android:id="@+id/wg_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:text="WG Details"
+        />
+
+    <TextView
+        android:id="@+id/wg_detail_name_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wg_details"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/wg_detail_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wg_detail_name_title"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/wg_detail_creation_date_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wg_detail_name"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/creation_date"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/wg_detail_creation_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wg_detail_creation_date_title"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/wg_detail_features_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wg_detail_creation_date"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/features"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/wg_detail_features_title">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/wg_detail_recycler_view_features"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/lists_without_checkbox" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/wg_detail_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/linear_container"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="-40dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp" />
+
+
+    <LinearLayout
+        android:id="@+id/linear_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="-60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@id/wg_detail_button_invitation_code">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/wg_detail_button_delete_wg"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/red"
+                android:text="@string/delete_wg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/wg_detail_button_leave_wg"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_height="60dp"
+                android:text="@string/leave_wg" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/wg_detail_button_invitation_code"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="-60dp"
+        android:text="@string/get_invitation_code"
+        android:layout_alignTop="@id/wg_detail_button_submit"/>
+
+    <Button
+        android:id="@+id/wg_detail_button_submit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/switch_to_this_wg" />
+
+
+</RelativeLayout>

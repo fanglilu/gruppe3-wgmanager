@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.features.finance.fragments.FinanceAddExpenseFragment"
+    android:background="@drawable/grade_background">
+
+    <TextView
+        android:id="@+id/add_expense_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Expense"
+        android:layout_marginTop="20dp"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/finance_add_expense_RL_required"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_expense_title">
+
+
+        <ImageView
+            android:id="@+id/finance_add_expense_imageButton"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="@string/expense_image"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+        <EditText
+            android:id="@+id/finance_add_expense_description"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/finance_add_expense_imageButton"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/finance_add_expense_imageButton"
+            android:hint="@string/enter_a_description"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+
+        <EditText
+            android:id="@+id/finance_add_expense_price"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/finance_add_expense_description"
+            android:layout_toEndOf="@+id/finance_add_expense_imageButton"
+            android:hint="@string/_0_00"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/finance_add_expense_RL_recurring"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finance_add_expense_RL_required">
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/recurring_label"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginEnd="5dp"-->
+        <!--            android:text="@string/recurring"-->
+        <!--            android:textSize="20sp" />-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/finance_add_expense_recurring_dropdown"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="365dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif"
+            android:hint="@string/recurring">
+            <!--            android:layout_below="@+id/recurring_label"-->
+
+            <AutoCompleteTextView
+                android:id="@+id/finance_add_expense_recurring_dropdown_autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/finance_add_expense_submit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/submit"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/finance_add_expense_delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="@string/delete"
+        android:visibility="visible"
+        android:backgroundTint="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finance_add_expense_RL_recurring" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.features.shoppinglist.fragments.CreateNewItemFragment"
+    android:id="@+id/create_new_item_container"
+    android:background="@color/semi_transparent_Black">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_corners_background"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:id="@+id/createItemTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight= "20dp"
+                android:layout_marginTop="25dp"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:background="@color/white">
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/createItemTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight= "20dp"
+                android:layout_below="@id/createItemTextName"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:background="@color/white">
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white">
+
+                <Button
+                    android:id="@+id/createNewItemButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Create item" />
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enterNameNewItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item name"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight= "20dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="sans-serif"
+                android:layout_alignParentTop="true"
+                android:maxLines="1" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enterDescriptionNewItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item description"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="sans-serif"
+                android:layout_marginRight= "20dp"
+                android:layout_below="@id/enterNameNewItem"
+                android:maxLines="1" />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

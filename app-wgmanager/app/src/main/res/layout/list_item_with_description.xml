@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/shopping_list_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="110dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/rounded_corners_background_wg_home">
+
+
+        <TextView
+            android:id="@+id/shoppingListEntryName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            />
+
+        <TextView
+            android:id="@+id/shoppingListEntryNumOfItems"
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/shoppingListEntryName"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            />
+
+        <TextView
+            android:id="@+id/shoppingListEntryOwner"
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/shoppingListEntryNumOfItems"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif">
+        </TextView>
+
+        <Button
+            android:id="@+id/shopping_list_entry_private"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/icon_locked_24"
+            app:iconTint="@color/black"
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="50dp"
+            android:stateListAnimator="@null"
+            android:backgroundTint="@color/white"
+            android:visibility="invisible">
+        </Button>
+
+        <Button
+            android:id="@+id/shoppingListEntryDetailButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/white"
+            android:stateListAnimator="@null"
+            app:icon="@drawable/ic_chevron_right_20sp"
+            app:iconTint="@color/black"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/shopping_list_delete"
+        android:layout_width="410dp"
+        android:layout_height="120dp"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/shopping_list_button_delete"
+            android:layout_width="55dp"
+            android:layout_height="65dp"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/red"
+            android:stateListAnimator="@null"
+            android:visibility="invisible"
+            app:icon="@drawable/icon_delete"
+            app:iconTint="@color/white" />
+        >
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

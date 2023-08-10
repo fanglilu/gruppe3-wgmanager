@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_new_list_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.features.shoppinglist.fragments.CreateNewListFragment"
+    android:background="@color/semi_transparent_Black">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_height="190dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_corners_background"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight= "20dp"
+                android:layout_marginTop="25dp"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:background="@color/white">
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/privateSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/enter_name_new_list"
+                android:layout_alignStart="@id/enter_name_new_list"
+                android:fontFamily="sans-serif"
+                android:text="@string/make_private">
+
+            </androidx.appcompat.widget.SwitchCompat>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white">
+
+                <Button
+                    android:id="@+id/create_new_list_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Create list" />
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enter_name_new_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="List name"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight= "20dp"
+                android:layout_marginTop="25dp"
+                android:layout_alignParentTop="true"
+                android:fontFamily="sans-serif"
+                android:maxLines="1" />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
